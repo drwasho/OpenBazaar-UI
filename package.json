@@ -45,7 +45,7 @@
     "react": "^0.12.2",
     "react-async": "^2.0.1",
     "react-router-component": "^0.23.3",
-    "openbazaar-connector": "^0.0.2"
+    "openbazaar-connector": "^0.0.3"
   },
   "scripts": {
     "commitLint": "jsxhint `git diff --cached --diff-filter=ACMRTUXB --name-only HEAD | egrep '\\.js$|\\.jsx$'`",
