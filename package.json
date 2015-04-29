@@ -1,0 +1,60 @@
+{
+  "name": "openbazaar-client",
+  "main": "dist/index.html",
+  "window": {
+    "icon": "dist/images/icon.png",
+    "title": "OpenBazaar",
+    "toolbar": false,
+    "frame": false,
+    "width": 900,
+    "height": 650,
+    "min_width": 900,
+    "min_height": 480,
+    "transparent": true,
+    "show": false
+  },
+  "devDependencies": {
+    "babel-loader": "^4.0.0",
+    "css-loader": "^0.9.1",
+    "exports-loader": "^0.6.2",
+    "express": "^4.12.0",
+    "extract-text-webpack-plugin": "^0.3.8",
+    "file-loader": "^0.8.1",
+    "imports-loader": "^0.6.3",
+    "jsx-loader": "^0.12.2",
+    "jsxhint": "^0.12.1",
+    "pre-commit": "^1.0.5",
+    "react-hot-loader": "^1.1.5",
+    "sass-loader": "^0.4.0-beta.1",
+    "style-loader": "^0.8.3",
+    "superstatic": "^2.0.2",
+    "url-loader": "^0.5.5",
+    "webpack": "^1.6.0",
+    "webpack-dev-server": "^1.7.0"
+  },
+  "dependencies": {
+    "animate.css": "^3.1.1",
+    "babel-core": "^4.4.5",
+    "bluebird": "^2.9.12",
+    "bootstrap-sass": "^3.3.3",
+    "debug": "^2.1.1",
+    "fluxxor": "^1.5.2",
+    "lodash": "^3.3.0",
+    "material-colors": "^1.0.0",
+    "mdi": "^0.9.22-alpha",
+    "react": "^0.12.2",
+    "react-async": "^2.0.1",
+    "react-router-component": "^0.23.3",
+    "openbazaar-connector": "^0.0.2"
+  },
+  "scripts": {
+    "commitLint": "jsxhint `git diff --cached --diff-filter=ACMRTUXB --name-only HEAD | egrep '\\.js$|\\.jsx$'`",
+    "lint": "jsxhint '**/*.js' '!node_modules/**/*' '!ui/build/**/*' '!ui/webroot/**/*' '!ui/assets/**/*'",
+    "dev": "bash run-dev.sh",
+    "build-prerender": "webpack --config webpack-prerender.config.js --progress --hide-modules",
+    "build-public": "npm run-script build-prerender & webpack --config webpack-production.config.js --progress --hide-modules"
+  },
+  "precommit": [
+    "commitLint"
+  ]
+}

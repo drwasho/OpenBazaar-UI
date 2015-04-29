@@ -1,0 +1,19 @@
+{
+  "node": true,
+  "browser": true,
+  "curly": false,
+  "undef": true,
+  "unused": false,
+  "shadow": true,
+  "eqeqeq": true,
+  "bitwise": true,
+  "freeze": true,
+  "indent": 2,
+  "noarg": true,
+  "strict": true,
+  "latedef": "nofunc",
+  "quotmark": false,
+  "trailing": true,
+  "esnext": true,
+  "predef": [ "-Promise" ]
+}
